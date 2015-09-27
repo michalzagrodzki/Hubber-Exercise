@@ -35,6 +35,10 @@ angular
         templateUrl: 'views/hubusers-list.html',
         controller: 'ListHubusersCtrl'
       })
+      .when('/hubusers/:login', {
+        templateUrl: 'views/hubuser-view.html',
+        controller: 'ViewHubusersCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
