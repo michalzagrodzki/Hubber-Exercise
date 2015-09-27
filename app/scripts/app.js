@@ -35,7 +35,7 @@ angular
         templateUrl: 'views/hubusers-list.html',
         controller: 'ListHubusersCtrl'
       })
-      .when('/hubusers/:login', {
+      .when('/hubuser/:login', {
         templateUrl: 'views/hubuser-view.html',
         controller: 'ViewHubusersCtrl'
       })
