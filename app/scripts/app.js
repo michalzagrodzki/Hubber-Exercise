@@ -32,7 +32,7 @@ angular
         controllerAs: 'about'
       })
       .when('/hubusers', {
-        templateUrl: 'views/hubuser-list.html',
+        templateUrl: 'views/hubusers-list.html',
         controller: 'ListHubusersCtrl'
       })
       .otherwise({
