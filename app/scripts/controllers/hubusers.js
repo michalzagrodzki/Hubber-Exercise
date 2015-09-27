@@ -7,11 +7,10 @@
  * # HubusersCtrl
  * Controller of the hubberAngularApp
  */
-angular.module('hubberAngularApp')
-  .controller('HubusersCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+var hubuserControllers = angular.module('hubuserControllers', []);
+
+// List Users of Github ( QUERY )
+hubuserControllers.controller('ListHubusersCtrl', ['$scope', 'Hubuser',
+  function($scope, Hubuser){
+    $scope.hubusers = Hubuser.query();
+}]);
