@@ -7,8 +7,12 @@
  * # hubusers
  * Factory in the hubberAngularApp.
  */
-angular.module('hubberAngularApp.services', [])
-  .factory('hubusers', function ($resource) {
-    return $resource('https://api.github.com/users');
+var hubusersServices = angular.module('hubusersServices', ['ngResource']) ;
 
-  });
+hubusersServices.factory('Hubuser', ['$resource',
+  function ($resource) {
+    return $resource('https://api.github.com/users', {
+      query: { method: 'GET', isArray: true },
+      get: { method: 'GET' }
+    });
+}]);
