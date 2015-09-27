@@ -1,1 +1,66 @@
-<h1>{{hubuser.login}}</h1>
+<div class="githubuser">
+  <div class="row">
+    <div class="col-md-10">
+      <h1>{{hubuser.name}}</h1>
+      <div class="row">
+        <p class="col-md-2">login: {{hubuser.login}}</p>
+        <p class="col-md-1">id: {{hubuser.id}}</p>
+        <p class="col-md-3">location: {{hubuser.location}}</p>
+      </div>
+      <div class="row">
+        <p class="col-md-5">created: {{hubuser.created_at}}</p>
+        <p class="col-md-5">last modified: {{hubuser.updated_at}}</p>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <img class="img-properties" src="{{hubuser.avatar_url}}">
+    </div>
+  </div>
+  <hr/>
+
+  <div class="col-md-4">
+    <h4>followers</h4>
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="..." alt="...">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Name of follower</h4>
+          <p>repos: </p>
+          <p>gists: </p>
+        </div>
+      </div>
+  </div>
+
+  <div class="col-md-4">
+    <h4>following</h4>
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="..." alt="...">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Name of following person</h4>
+          <p>repos: </p>
+          <p>gists: </p>
+        </div>
+      </div>
+  </div>
+
+  <div class="col-md-4">
+    <h4>subscriptions</h4>
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="..." alt="...">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">Subscription name</h4>
+      </div>
+    </div>
+  </div>
+</div>
