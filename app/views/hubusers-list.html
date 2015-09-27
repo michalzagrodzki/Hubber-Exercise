@@ -1,1 +1,6 @@
-<p>This is the hubusers-list view.</p>
+<ul class="githubusers">
+  <li ng-repeat="hubuser in hubusers"
+      class="thumbnail">
+    <p>{{hubuser.login}}</p>
+  </li>
+</ul>
