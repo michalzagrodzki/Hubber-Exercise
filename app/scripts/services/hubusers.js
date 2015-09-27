@@ -11,7 +11,7 @@ var hubusersServices = angular.module('hubusersServices', ['ngResource']) ;
 
 hubusersServices.factory('Hubuser', ['$resource',
   function ($resource) {
-    return $resource('https://api.github.com/users', {
+    return $resource('https://api.github.com/users/:login', {
       query: { method: 'GET', isArray: true },
       get: { method: 'GET' }
     });
