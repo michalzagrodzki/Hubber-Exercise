@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'hubusersServices'
+    'hubusersServices',
+    'hubuserControllers'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -29,6 +30,10 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/hubusers', {
+        templateUrl: 'views/hubuser-list.html',
+        controller: 'ListHubusersCtrl'
       })
       .otherwise({
         redirectTo: '/'
