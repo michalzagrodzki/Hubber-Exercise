@@ -32,7 +32,6 @@
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.0",
     "time-grunt": "^1.0.0",
-    "http-server": "^0.6.1",
     "tmp": "0.0.23",
     "shelljs": "^0.2.6"
 
@@ -40,12 +39,6 @@
 
   "engines": {
     "node": ">=0.10.0"
-  },
-
-  "scripts": {
-
-    "prestart": "npm install",
-    "start": "http-server -a 0.0.0.0 -p 3000"
-
   }
+
 }
