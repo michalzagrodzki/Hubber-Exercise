@@ -87,3 +87,9 @@ body {
     border-bottom: 0;
   }
 }
+
+@media screen and (min-width: 968px) {
+  .container {
+    max-width: 960px;
+  }
+}
