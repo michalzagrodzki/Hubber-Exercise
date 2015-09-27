@@ -1,6 +1,9 @@
 <ul class="githubusers">
   <li ng-repeat="hubuser in hubusers"
       class="thumbnail">
-    <p>{{hubuser.login}}</p>
+    <a href="#/hubusers/{{hubuser.login}}">
+      <p>{{hubuser.login}}</p>
+    </a>
+
   </li>
 </ul>
