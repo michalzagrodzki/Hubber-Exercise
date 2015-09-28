@@ -10,9 +10,9 @@
 var hubuserControllers = angular.module('hubuserControllers', []);
 
 // List Users of Github ( QUERY ) - List
-hubuserControllers.controller('ListHubusersCtrl', ['$scope', 'Hubuser',
-  function($scope, Hubuser){
-    $scope.hubusers = Hubuser.query();
+hubuserControllers.controller('ListHubusersCtrl', ['$scope', 'Hubusers',
+  function($scope, Hubusers){
+    $scope.hubusers = Hubusers.query();
 }]);
 
 // Single User of Github ( GET ) - View
