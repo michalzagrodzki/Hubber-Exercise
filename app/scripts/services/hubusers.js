@@ -7,6 +7,8 @@
  * # hubusers
  * Factory in the hubberAngularApp.
  */
+
+// service for calling data from github API
 var hubusersServices = angular.module('hubusersServices', ['ngResource']) ;
 
 hubusersServices.factory('Hubuser', ['$resource',
