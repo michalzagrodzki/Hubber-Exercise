@@ -8,11 +8,10 @@
         </a>
       </div>
       <div class="col-md-8">
-        <a ui-sref="hubusers/{{hubuser.login}}">
-
+        <a ui-sref="hubusersDetail({login:hubuser.login})">
           <p>{{hubuser.login}}</p>
         </a>
-      <a href="#/hubusers/{{hubuser.login}}">
+      <a ui-sref="hubusersDetail({login:hubuser.login})">
         <p>{{hubuser.login}}</p>
       </a>
       </div>
