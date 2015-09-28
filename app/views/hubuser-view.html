@@ -3,13 +3,13 @@
     <div class="col-md-10">
       <h1>{{hubuser.name}}</h1>
       <div class="row">
-        <p class="col-md-2">login: {{hubuser.login}}</p>
-        <p class="col-md-1">id: {{hubuser.id}}</p>
+        <p class="col-md-3">login: {{hubuser.login}}</p>
+        <p class="col-md-3">id: {{hubuser.id}}</p>
         <p class="col-md-3">location: {{hubuser.location}}</p>
       </div>
       <div class="row">
-        <p class="col-md-5">created: {{hubuser.created_at}}</p>
-        <p class="col-md-5">last modified: {{hubuser.updated_at}}</p>
+        <p class="col-md-6">created: {{hubuser.created_at | amDateFormat:'dddd, Do MMMM YYYY'}}</p>
+        <p class="col-md-6">last modified: <span am-time-ago="hubuser.updated_at"></span></p>
       </div>
       <div class="row">
         <p class="col-md-3">public repositories: {{hubuser.public_repos}}</p>
