@@ -16,7 +16,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'ngRoute',
+    'angularMoment',
     'hubusersServices',
     'hubuserControllers'
   ])
