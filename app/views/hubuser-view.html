@@ -11,6 +11,12 @@
         <p class="col-md-5">created: {{hubuser.created_at}}</p>
         <p class="col-md-5">last modified: {{hubuser.updated_at}}</p>
       </div>
+      <div class="row">
+        <p class="col-md-3">public repositories: {{hubuser.public_repos}}</p>
+        <p class="col-md-3">public gists: {{hubuser.public_gists}}</p>
+        <p class="col-md-3">followers: {{hubuser.followers}}</p>
+        <p class="col-md-3">following: {{hubuser.following}}</p>
+      </div>
     </div>
     <div class="col-md-2">
       <img class="img-properties" src="{{hubuser.avatar_url}}">
