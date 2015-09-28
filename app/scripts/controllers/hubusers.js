@@ -16,7 +16,7 @@ hubuserControllers.controller('ListHubusersCtrl', ['$scope', 'Hubuser',
 }]);
 
 // Single User of Github ( GET ) - View
-hubuserControllers.controller('ViewHubusersCtrl', ['$scope', '$routeParams', 'Hubuser',
-  function($scope, $routeParams, Hubuser){
-    $scope.hubuser = Hubuser.get({ login: $routeParams.login });
+hubuserControllers.controller('ViewHubusersCtrl', ['$scope', '$stateParams', 'Hubuser',
+  function($scope, $stateParams, Hubuser){
+    $scope.hubuser = Hubuser.get({ login: $stateParams.login });
   }]);

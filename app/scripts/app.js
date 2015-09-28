@@ -13,33 +13,49 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ui.router',
+    'ngRoute',
     'hubusersServices',
     'hubuserControllers'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .when('/hubusers', {
-        templateUrl: 'views/hubusers-list.html',
-        controller: 'ListHubusersCtrl'
-      })
-      .when('/hubuser/:login', {
-        templateUrl: 'views/hubuser-view.html',
-        controller: 'ViewHubusersCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+
+.config(function ($stateProvider, $urlRouterProvider) {
+
+  // Default route, when url is not specified
+  $urlRouterProvider.otherwise('/');
+
+  $stateProvider
+
+    // Main Route
+    .state('/', {
+      url: '/',
+      templateUrl: 'views/main.html',
+      controller: 'MainCtrl',
+      controllerAs: 'main'
+    })
+
+    // About Route
+    .state('about', {
+      url: '/about',
+      templateUrl: 'views/about.html',
+      controller: 'AboutCtrl',
+      controllerAs: 'about'
+    })
+
+    // Github Users INDEX Route
+    .state('hubusersIndex', {
+      url: '/hubusers',
+      templateUrl: 'views/hubusers-list.html',
+      controller: 'ListHubusersCtrl'
+    })
+
+    // Github User DETAIL Route
+    .state('hubusersDetail', {
+      url: '/hubusers/:login',
+      templateUrl: 'views/hubuser-view.html',
+      controller: 'ViewHubusersCtrl'
+    });
+
   });

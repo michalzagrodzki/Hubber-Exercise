@@ -1,4 +1,3 @@
-<div ng-cloak>
 <ul class="githubusers">
   <li ng-repeat="hubuser in hubusers"
       class="thumbnail">
@@ -9,10 +8,11 @@
         </a>
       </div>
       <div class="col-md-8">
-        <a href="#/hubuser/{{hubuser.login}}">
+        <a ui-sref="hubusers/{{hubuser.login}}">
+
           <p>{{hubuser.login}}</p>
         </a>
-      <a href="#/hubuser/{{hubuser.login}}">
+      <a href="#/hubusers/{{hubuser.login}}">
         <p>{{hubuser.login}}</p>
       </a>
       </div>
@@ -22,4 +22,3 @@
     </div>
   </li>
 </ul>
-</div>
