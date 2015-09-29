@@ -16,6 +16,10 @@
         <p class="col-md-3 color-muted">public gists: <span class="color-normal">{{hubuser.public_gists}}</span></p>
         <p class="col-md-3 color-muted">followers: <span class="color-normal">{{hubuser.followers}}</span></p>
         <p class="col-md-3 color-muted">following: <span class="color-normal">{{hubuser.following}}</span></p>
+        <p class="col-md-12 color-muted">This user is hireable:
+          <span ng-if="hubuser.hireable" class="glyphicon glyphicon-ok glyphicon-green"></span>
+          <span ng-if="!hubuser.hireable" class="glyphicon glyphicon-remove glyphicon-red"></span>
+        </p>
       </div>
     </div>
     <div class="col-md-2">
