@@ -32,31 +32,14 @@ angular
     .state('/', {
       url: '/',
       templateUrl: 'views/main.html',
-      controller: 'MainCtrl',
-      controllerAs: 'main'
-    })
-
-    // About Route
-    .state('about', {
-      url: '/about',
-      templateUrl: 'views/about.html',
-      controller: 'AboutCtrl',
-      controllerAs: 'about'
+      controller: 'MainCtrl'
     })
 
     // Github Users INDEX Route
     .state('hubusersIndex', {
       url: '/hubusers',
-      views: {
-        '' : {   templateUrl: 'views/hubusers-list.html',
-                controller: 'ListHubusersCtrl'
-            },
-        'hubuserName@hubusersIndex' : {
-          templateUrl: 'views/hubusers-list-partial-name.html',
-          controller: 'ViewHubusersCtrl'
-        }
-      }
-
+      templateUrl: 'views/hubusers-list.html',
+      controller: 'ListHubusersCtrl'
     })
 
     // Github User DETAIL Route

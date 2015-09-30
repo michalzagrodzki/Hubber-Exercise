@@ -8,25 +8,25 @@
  * Factory in the hubberAngularApp.
  */
 
-// service for calling data from github API
-var hubusersServices = angular.module('hubusersServices', ['ngResource']) ;
+// factory for calling data from github API
+var hubusersServices = angular.module('hubusersServices', []);
 
-// Service for querying LIST of users ( QUERY )
-hubusersServices.factory('Hubusers', ['$resource',
-  function ($resource) {
-    return $resource('https://api.github.com/users', {
-        query: {
-          method: 'GET'
-        }
-      });
+hubusersServices.factory('hubusersFactory', ['$http', function($http){
+
+  var baseUrl = "https://api.github.com/users";
+  var hubusersFactory = {};
+
+  // QUERY github users
+  hubusersFactory.getHubUsers = function() {
+    return $http.get(baseUrl);
+  };
+
+  // GET single github user
+  hubusersFactory.getHubUser = function(login) {
+    return $http.get(baseUrl + '/' + login);
+  };
+
+  return hubusersFactory;
+
   }]);
 
-// Service for listing SINGLE user ( GET )
-hubusersServices.factory('Hubuser', ['$resource',
-  function ($resource) {
-    return $resource('https://api.github.com/users/:login', {
-      get: {
-        method: 'GET'
-      }
-    });
-}]);

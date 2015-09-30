@@ -1,23 +1,25 @@
-<ul class="githubusers">
-  <li ng-repeat="hubuser in hubusers"
-      class="thumbnail">
-    <div class="row">
-      <div class="col-md-2">
-        <a href={{hubuser.html_url}}>
-          <img class="img-properties" src="{{hubuser.avatar_url}}">
-        </a>
-      </div>
-      <div class="col-md-8">
+<section data-ng-controller="ListHubusersCtrl" data-ng-init="getHubUsers()">
+  <ul class="githubusers">
+    <li ng-repeat="hubuser in hubusers"
+        class="thumbnail">
+      <div class="row">
+        <div class="col-md-2">
+          <a href={{hubuser.html_url}}>
+            <img class="img-properties" src="{{hubuser.avatar_url}}">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <a ui-sref="hubusersDetail({login:hubuser.login})">
+            <div ui-view="hubuserName"></div>
+          </a>
         <a ui-sref="hubusersDetail({login:hubuser.login})">
-          <div ui-view="hubuserName"></div>
+          <p class="hubusers-list-font-title">{{hubuser.login}}</p>
         </a>
-      <a ui-sref="hubusersDetail({login:hubuser.login})">
-        <p class="hubusers-list-font-title">{{hubuser.login}}</p>
-      </a>
+        </div>
+        <div class="col-md-2">
+          <p class="hubusers-list-font-hireable">hireable</p>
+        </div>
       </div>
-      <div class="col-md-2">
-        <p class="hubusers-list-font-hireable">hireable</p>
-      </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
+</section>
