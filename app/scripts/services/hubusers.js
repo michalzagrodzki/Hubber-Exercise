@@ -26,6 +26,23 @@ hubusersServices.factory('hubusersFactory', ['$stateParams', '$http', function($
     return $http.get(baseUrl + '/' + $stateParams.login);
   };
 
+  // methods related to single user
+
+  // QUERY repositories for single github user
+  hubusersFactory.getRepositories = function($stateParams) {
+    return $http.get(baseUrl + '/' + $stateParams.login + '/repos');
+  };
+
+  // QUERY followers for single github user
+  hubusersFactory.getRepositories = function($stateParams) {
+    return $http.get(baseUrl + '/' + $stateParams.login + '/followers');
+  };
+
+  // QUERY organizations for single github user
+  hubusersFactory.getRepositories = function($stateParams) {
+    return $http.get(baseUrl + '/' + $stateParams.login + '/orgs');
+  };
+
   return hubusersFactory;
 
   }]);
