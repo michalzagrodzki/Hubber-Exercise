@@ -8,20 +8,14 @@
  * Controller of the hubberAngularApp
  */
 var hubuserControllers = angular.module('hubuserControllers', []);
-/*
 
-// Single User of Github ( GET ) - View
-hubuserControllers.controller('ViewHubusersCtrl', ['$scope', '$stateParams', 'Hubuser',
-  function($scope, $stateParams, Hubuser){
-    $scope.hubuser = Hubuser.get({ login: $stateParams.login });
-  }]);
-*/
 // List Users of Github ( QUERY ) - List
-hubuserControllers.controller('ListHubusersCtrl', ['$scope', 'hubusersFactory',
-  function($scope, hubusersFactory){
+hubuserControllers.controller('ListHubusersCtrl', ['$scope', '$stateParams', 'hubusersFactory',
+  function($scope, $stateParams, hubusersFactory){
 
     $scope.status;
 
+    // QUERY Github Users
     $scope.getHubUsers = function (){
       hubusersFactory.getHubUsers()
         .success(function(hubs){
@@ -29,6 +23,17 @@ hubuserControllers.controller('ListHubusersCtrl', ['$scope', 'hubusersFactory',
         })
         .error(function(error){
           $scope.status = 'Unable to load users list: ' + error.message;
+        });
+    };
+
+    // GET Github User
+    $scope.getHubUser = function (){
+      hubusersFactory.getHubUser({ login: $stateParams.login })
+        .success(function(hub){
+          $scope.hubuser = hub;
+        })
+        .error(function(error){
+          $scope.status = 'Unable to load specific user: ' + error.message;
         });
     };
 

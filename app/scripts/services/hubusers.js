@@ -22,8 +22,8 @@ hubusersServices.factory('hubusersFactory', ['$http', function($http){
   };
 
   // GET single github user
-  hubusersFactory.getHubUser = function(login) {
-    return $http.get(baseUrl + '/' + login);
+  hubusersFactory.getHubUser = function(stateParams) {
+    return $http.get(baseUrl + '/' + stateParams.login);
   };
 
   return hubusersFactory;

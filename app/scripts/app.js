@@ -46,7 +46,7 @@ angular
     .state('hubusersDetail', {
       url: '/hubusers/:login',
       templateUrl: 'views/hubuser-view.html',
-      controller: 'ViewHubusersCtrl'
+      controller: 'ListHubusersCtrl'
     });
 
   });
