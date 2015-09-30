@@ -37,4 +37,15 @@ hubuserControllers.controller('ListHubusersCtrl', ['$scope', '$stateParams', 'hu
         });
     };
 
+    // QUERY Repositories for Github User
+    $scope.getRepositories = function (){
+      hubusersFactory.getRepositories({ login: $stateParams.login })
+        .success(function(repos){
+          $scope.repos = repos;
+        })
+        .error(function(error){
+          $scope.status = 'Unable to load specific user: ' + error.message;
+        });
+    };
+
 }]);

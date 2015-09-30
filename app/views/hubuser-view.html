@@ -28,6 +28,17 @@
     </div>
   </div>
   <hr/>
+
+<section data-ng-controller="ListHubusersCtrl" data-ng-init="getRepositories()">
+  <div class="col-md-10">
+    <ul>
+      <li ng-repeat="repo in repos">
+        <h1>{{repo.name}}</h1>
+      </li>
+    </ul>
+  </div>
+
+</section>
 <!--
   <div class="col-md-4">
     <h4>followers</h4>
