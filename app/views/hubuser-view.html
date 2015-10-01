@@ -68,72 +68,26 @@
 
   </section>
 
-<section data-ng-controller="HubusersCtrl" data-ng-init="getRepositories()">
-  <div class="col-md-12">
-    <hr/>
-    <h4>Repositories:</h4>
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="repo in repos">
-        <h4 class="list-group-item-heading">{{repo.name}}</h4>
-        <br/>
-        <div class="row">
-          <p class="col-md-2">{{repo.language}}</p>
-          <p class="col-md-2 color-muted">Size: <span class="color-normal">{{repo.size}} KB</span></p>
-          <p class="col-md-4 color-muted">Created: <span class="color-normal">{{repo.created_at | amDateFormat:'Do MMMM YYYY'}}</span></p>
-          <p class="col-md-4 color-muted"> Updated: <span class="color-normal" am-time-ago="repo.updated_at"></span></p>
-        </div>
-          <p class="list-group-item-text">{{repo.description}}</p>
-      </li>
-    </ul>
-  </div>
-
-</section>
-<!--
-  <div class="col-md-4">
-    <h4>followers</h4>
-      <div class="media">
-        <div class="media-left">
-          <a href="#">
-            <img class="media-object" src="..." alt="...">
-          </a>
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">Name of follower</h4>
-          <p>repos: </p>
-          <p>gists: </p>
-        </div>
-      </div>
-  </div>
-
-  <div class="col-md-4">
-    <h4>following</h4>
-      <div class="media">
-        <div class="media-left">
-          <a href="#">
-            <img class="media-object" src="..." alt="...">
-          </a>
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">Name of following person</h4>
-          <p>repos: </p>
-          <p>gists: </p>
-        </div>
-      </div>
-  </div>
-
-  <div class="col-md-4">
-    <h4>subscriptions</h4>
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="..." alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">Subscription name</h4>
-      </div>
+  <section data-ng-controller="HubusersCtrl" data-ng-init="getRepositories()">
+    <div class="col-md-12">
+      <hr/>
+      <h4>Repositories:</h4>
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="repo in repos">
+          <h4 class="list-group-item-heading">{{repo.name}}</h4>
+          <br/>
+          <div class="row">
+            <p class="col-md-2">{{repo.language}}</p>
+            <p class="col-md-2 color-muted">Size: <span class="color-normal">{{repo.size}} KB</span></p>
+            <p class="col-md-4 color-muted">Created: <span class="color-normal">{{repo.created_at | amDateFormat:'Do MMMM YYYY'}}</span></p>
+            <p class="col-md-4 color-muted"> Updated: <span class="color-normal" am-time-ago="repo.updated_at"></span></p>
+          </div>
+            <p class="list-group-item-text">{{repo.description}}</p>
+        </li>
+      </ul>
     </div>
-  </div>
-  -->
+
+  </section>
+
 </div>
 </section>
