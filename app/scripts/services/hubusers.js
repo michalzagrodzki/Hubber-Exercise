@@ -38,6 +38,11 @@ hubusersServices.factory('hubusersFactory', ['$stateParams', '$http', function($
     return $http.get(baseUrl + '/' + $stateParams.login + '/followers');
   };
 
+  // QUERY followers for single github user
+  hubusersFactory.getFollowing = function($stateParams) {
+    return $http.get(baseUrl + '/' + $stateParams.login + '/following');
+  };
+
   // QUERY organizations for single github user
   hubusersFactory.getOrganizations = function($stateParams) {
     return $http.get(baseUrl + '/' + $stateParams.login + '/orgs');

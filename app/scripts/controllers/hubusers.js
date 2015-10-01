@@ -59,4 +59,15 @@ hubuserControllers.controller('HubusersCtrl', ['$scope', '$stateParams', 'hubuse
         });
     };
 
+    // QUERY Followed people for Github User
+    $scope.getFollowing = function (){
+      hubusersFactory.getFollowing({ login: $stateParams.login })
+        .success(function(repos){
+          $scope.followings = repos;
+        })
+        .error(function(error){
+          $scope.status = 'Unable to load specific user: ' + error.message;
+        });
+    };
+
 }]);
