@@ -39,14 +39,14 @@ angular
     .state('hubusersIndex', {
       url: '/hubusers',
       templateUrl: 'views/hubusers-list.html',
-      controller: 'ListHubusersCtrl'
+      controller: 'HubusersCtrl'
     })
 
     // Github User DETAIL Route
     .state('hubusersDetail', {
       url: '/hubusers/:login',
       templateUrl: 'views/hubuser-view.html',
-      controller: 'ListHubusersCtrl'
+      controller: 'HubusersCtrl'
     });
 
   });
