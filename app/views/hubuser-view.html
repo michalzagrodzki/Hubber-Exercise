@@ -11,7 +11,7 @@
       <div class="row">
         <p class="col-md-6 color-muted">created: <span class="color-normal">{{hubuser.created_at | amDateFormat:'dddd, Do MMMM YYYY'}}</span></p>
         <p class="col-md-6 color-muted">last modified: <span class="color-normal" am-time-ago="hubuser.updated_at"></span></p>
-      </div>
+    </div>
       <div class="row">
         <p class="col-md-3 color-muted">public repositories: <span class="color-normal">{{hubuser.public_repos}}</span></p>
         <p class="col-md-3 color-muted">public gists: <span class="color-normal">{{hubuser.public_gists}}</span></p>
@@ -30,10 +30,18 @@
   <hr/>
 
 <section data-ng-controller="ListHubusersCtrl" data-ng-init="getRepositories()">
-  <div class="col-md-10">
-    <ul>
-      <li ng-repeat="repo in repos">
-        <h1>{{repo.name}}</h1>
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="repo in repos">
+        <h4 class="list-group-item-heading">{{repo.name}}</h4>
+        <br/>
+        <div class="row">
+          <p class="col-md-2">{{repo.language}}</p>
+          <p class="col-md-2 color-muted">Size: <span class="color-normal">{{repo.size}} KB</span></p>
+          <p class="col-md-4 color-muted">Created: <span class="color-normal">{{repo.created_at | amDateFormat:'Do MMMM YYYY'}}</span></p>
+          <p class="col-md-4 color-muted"> Updated: <span class="color-normal" am-time-ago="repo.updated_at"></span></p>
+        </div>
+          <p class="list-group-item-text">{{repo.description}}</p>
       </li>
     </ul>
   </div>
