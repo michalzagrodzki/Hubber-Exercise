@@ -36,7 +36,14 @@
           <h4>Followers:</h4>
         </div>
         <div class="col-md-6">
-          <p>Sort by:<span><a href="" ng-click="sortField = 'login'; reverse = !reverse"> Login</a></span></p>
+          <div class="row">
+            <div class="col-md-3">
+              <p>Sort by:</p>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" ng-click="sortField = 'login'; reverse = !reverse">Login</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -83,7 +90,14 @@
           <h4>Following:</h4>
         </div>
         <div class="col-md-6">
-          <p>Sort by:<span><a href="" ng-click="sortField = 'login'; reverse = !reverse"> Login</a></span></p>
+          <div class="row">
+            <div class="col-md-3">
+              <p>Sort by:</p>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" ng-click="sortField = 'login'; reverse = !reverse">Login</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -121,7 +135,6 @@
     </div>
 
   </section>
-
   <section data-ng-controller="HubusersCtrl" data-ng-init="getRepositories()">
     <div class="col-md-12">
       <hr/>
@@ -131,14 +144,15 @@
         </div>
         <div class="col-md-10">
           <div class="row">
-            <div class="col-md-2">Sort by:</div>
-            <div class="col-md-1"> <a href="" ng-click="sortField = 'name'; reverse = !reverse"> Name</a></div>
-            <div class="col-md-1">|</div>
-            <div class="col-md-2"> <a href="" ng-click="sortField = 'language'; reverse = !reverse"> Language</a></div>
-            <div class="col-md-1">|</div>
-            <div class="col-md-2"> <a href="" ng-click="sortField = 'created_at'; reverse = !reverse"> Created</a></div>
-            <div class="col-md-1">|</div>
-            <div class="col-md-2"> <a href="" ng-click="sortField = 'updated_at'; reverse = !reverse"> Updated</a></div>
+            <div class="col-md-2 col-md-offset-5">
+              <p>Sort by:</p>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" ng-click="sortField = 'name'; reverse = !reverse">Name</button>
+              <button type="button" class="btn btn-default" ng-click="sortField = 'language'; reverse = !reverse">Language</button>
+              <button type="button" class="btn btn-default" ng-click="sortField = 'created_at'; reverse = !reverse">Created</button>
+              <button type="button" class="btn btn-default" ng-click="sortField = 'updated_at'; reverse = !reverse">Updated</button>
+            </div>
           </div>
         </div>
       </div>
