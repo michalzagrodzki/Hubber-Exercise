@@ -40,10 +40,13 @@ angular
       url: '/hubusers',
 
       views: {
-        '' : { controller: 'HubusersCtrl',
+        '' : {
+          controller: 'HubusersCtrl',
           templateUrl: 'views/hubusers-list.html'
-           },
-        'name@hubusersIndex' : { templateUrl: 'views/hubusers-list-partial-name.html'}
+        },
+        'name@hubusersIndex' : {
+          templateUrl: 'views/hubusers-list-partial-name.html'
+        }
 
       }
     })
