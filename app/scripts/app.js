@@ -38,8 +38,14 @@ angular
     // Github Users INDEX Route
     .state('hubusersIndex', {
       url: '/hubusers',
-      templateUrl: 'views/hubusers-list.html',
-      controller: 'HubusersCtrl'
+
+      views: {
+        '' : { controller: 'HubusersCtrl',
+          templateUrl: 'views/hubusers-list.html'
+           },
+        'name@hubusersIndex' : { templateUrl: 'views/hubusers-list-partial-name.html'}
+
+      }
     })
 
     // Github User DETAIL Route
