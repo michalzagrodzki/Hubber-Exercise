@@ -70,4 +70,15 @@ hubuserControllers.controller('HubusersCtrl', ['$scope', '$stateParams', 'hubuse
         });
     };
 
+    // name for hubuser
+    $scope.getHubUserName = function (name){
+      hubusersFactory.getHubUser({ login: name })
+        .success(function(hub){
+          $scope.hubuserName = hub;
+        })
+        .error(function(error){
+          $scope.status = 'Unable to load specific user: ' + error.message;
+        });
+    };
+
 }]);
