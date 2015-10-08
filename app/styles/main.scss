@@ -54,10 +54,16 @@ body {
 }
 
 .hubusers-list-font-title{
-  font-size: 20px;
+  font-size: 26px;
   color: #4F4F4F;
-
+  margin-bottom: 0px;
   margin-top: 40px;
+}
+
+.hubusers-list-font-secondary-title{
+  font-size: 18px;
+  margin-top: 0px;
+  color: #bcbcb9;
 }
 
 .hubusers-list-font-hireable{
@@ -139,8 +145,16 @@ body {
   }
 
   .hubusers-list-font-title{
-    font-size: 22px;
+    font-size: 26px;
     margin-top: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .hubusers-list-font-secondary-title{
+    font-size: 18px;
+    margin-top: 0px;
+    color: #bcbcb9;
     text-align: center;
   }
 
