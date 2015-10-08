@@ -27,6 +27,17 @@ hubuserControllers.controller('HubusersCtrl', ['$scope', '$stateParams', 'hubuse
         });
     };
 
+    // QUERY new range of Github Users
+    $scope.getMoreHubUsers = function (){
+      hubusersFactory.getMoreHubUsers({ userSpan: $stateParams.userSpan })
+        .success(function(hubs){
+          $scope.hubusers = hubs;
+        })
+        .error(function(error){
+          $scope.status = 'Unable to load more users list: ' + error.message;
+        });
+    };
+
     // GET Github User
     $scope.getHubUser = function (){
       hubusersFactory.getHubUser({ login: $stateParams.login })

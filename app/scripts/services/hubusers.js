@@ -21,6 +21,11 @@ hubusersServices.factory('hubusersFactory', ['$stateParams', '$http', function($
     return $http.get(baseUrl);
   };
 
+  // QUERY new batch of github users
+  hubusersFactory.getMoreHubUsers = function($stateParams) {
+    return $http.get(baseUrl) + '?since=' + $stateParams.userSpan;
+  };
+
   // GET single github user
   hubusersFactory.getHubUser = function($stateParams) {
     return $http.get(baseUrl + '/' + $stateParams.login);

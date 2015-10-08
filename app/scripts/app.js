@@ -51,9 +51,16 @@ angular
       }
     })
 
+    // Github Users INDEX Route for new span of users
+    .state('hubusersIndexMore', {
+      url: '/hubusers/:userSpan',
+      templateUrl: 'views/hubusers-list.html',
+      controller: 'HubusersCtrl'
+    })
+
     // Github User DETAIL Route
     .state('hubusersDetail', {
-      url: '/hubusers/:login',
+      url: '/hubuser/:login',
       templateUrl: 'views/hubuser-view.html',
       controller: 'HubusersCtrl'
     });
