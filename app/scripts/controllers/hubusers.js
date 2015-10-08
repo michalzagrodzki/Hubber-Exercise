@@ -70,7 +70,7 @@ hubuserControllers.controller('HubusersCtrl', ['$scope', '$stateParams', 'hubuse
         });
     };
 
-    // name for hubuser
+    // GET name of Github User for QUERY list
     $scope.getHubUserName = function (name){
       hubusersFactory.getHubUser({ login: name })
         .success(function(hub){
