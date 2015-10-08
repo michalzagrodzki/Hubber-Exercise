@@ -14,6 +14,7 @@ hubuserControllers.controller('HubusersCtrl', ['$scope', '$stateParams', 'hubuse
   function($scope, $stateParams, hubusersFactory){
 
     $scope.status;
+    $scope.quantity = 1;
 
     // QUERY Github Users
     $scope.getHubUsers = function (){
