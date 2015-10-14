@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="row">
-          <div ng-repeat="follower in followers | orderBy:sortField:reverse">
+          <div ng-repeat="follower in followers | orderBy:sortField:reverse" class="repeated-item">
             <div class="col-md-6">
               <div class="panel panel-default">
 
@@ -101,7 +101,7 @@
         </div>
       </div>
       <div class="row">
-        <div ng-repeat="following in followings | orderBy:sortField:reverse">
+        <div ng-repeat="following in followings | orderBy:sortField:reverse" class="repeated-item">
           <div class="col-md-6">
             <div class="panel panel-default">
 
@@ -157,7 +157,7 @@
         </div>
       </div>
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="repo in repos | orderBy:sortField:reverse">
+        <li class="repeated-item list-group-item" ng-repeat="repo in repos | orderBy:sortField:reverse">
           <h4 class="list-group-item-heading">{{repo.name}}</h4>
           <br/>
           <div class="row">
