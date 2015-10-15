@@ -1,7 +1,12 @@
 
 // START -- Animation related to showing new elements
-.repeated-item.ng-enter, .repeated-item.ng-move {
-  transition:0.5s linear all;
+.repeated-item.ng-enter,  {
+  transition:0.8s linear all;
+  opacity:0;
+}
+
+.repeated-item.ng-move {
+  transition:0.2s linear all;
   opacity:0;
 }
 
@@ -11,7 +16,7 @@
 }
 
 .repeated-item.ng-leave {
-  animation:0.5s my_animation;
+  animation:0.2s my_animation;
 }
 
 @keyframes my_animation {
