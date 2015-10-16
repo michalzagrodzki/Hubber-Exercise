@@ -18,7 +18,8 @@ angular
     'ui.router',
     'angularMoment',
     'hubusersServices',
-    'hubuserControllers'
+    'hubuserControllers',
+    'hubusersDirectives'
   ])
 
 .config(function ($stateProvider, $urlRouterProvider) {
