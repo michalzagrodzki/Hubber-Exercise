@@ -55,7 +55,7 @@ angular
     // Github Users INDEX Route for new span of users
     .state('hubusersIndexMore', {
       url: '/hubusers/:userSpan',
-      templateUrl: 'views/hubusers-list.html',
+      templateUrl: 'views/hubusers-list-more.html',
       controller: 'HubusersCtrl'
     })
 
