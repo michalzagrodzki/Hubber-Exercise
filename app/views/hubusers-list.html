@@ -5,32 +5,35 @@
   </div>
   <br>
   <div class="col-md-12">
-  <ul class="githubusers">
-    <li ng-repeat="hubuser in hubusers | filter:query | limitTo:quantity"
-        class="repeated-item thumbnail">
-      <div class="row">
-        <div class="col-md-2">
-          <a href={{hubuser.html_url}}>
-            <img class="img-properties" src="{{hubuser.avatar_url}}">
-          </a>
-        </div>
-        <div class="col-md-8">
-          <a ui-sref="hubusersDetail({login:hubuser.login})">
-          <div ui-view="name"></div>
-          </a>
-          <h3 class="hubusers-list-font-secondary-title">{{hubuser.login}}</h3>
+    <ul class="githubusers">
+      <li ng-repeat="hubuser in hubusers | filter:query | limitTo:quantity"
+          class="repeated-item thumbnail">
+        <div class="row">
+
+          <div class="col-md-2">
+            <a href={{hubuser.html_url}}>
+              <img class="img-properties" src="{{hubuser.avatar_url}}">
+            </a>
+          </div>
+
+          <div class="col-md-8">
+            <a ui-sref="hubusersDetail({login:hubuser.login})">
+            <div ui-view="name"></div>
+            </a>
+            <h3 class="hubusers-list-font-secondary-title">{{hubuser.login}}</h3>
+          </div>
+
+          <div class="col-md-2">
+            <div class="row">
+              <p class="hubusers-list-font-hireable">Hireable:
+              <span ng-if="hubuserName.hireable" class="glyphicon glyphicon-ok-circle glyphicon-green"></span>
+              <span ng-if="!hubuserName.hireable" class="glyphicon glyphicon-remove-circle glyphicon-red"></span>
+              </p>
+            </div>
+          </div>
 
         </div>
-        <div class="col-md-2">
-          <div class="row">
-            <p class="hubusers-list-font-hireable">Hireable:
-            <span ng-if="hubuserName.hireable" class="glyphicon glyphicon-ok-circle glyphicon-green"></span>
-            <span ng-if="!hubuserName.hireable" class="glyphicon glyphicon-remove-circle glyphicon-red"></span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </li>
+      </li>
   </ul>
   </div>
 </section>
